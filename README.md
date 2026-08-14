@@ -6,6 +6,8 @@ playing on scrambles itself underneath you.
 
 Black cube body, all-white stickers, fully rotatable by dragging.
 
+**▶ [Play it](https://rommanve.github.io/cube-tac-toe/)**
+
 ## Running it
 
 No dependencies and no build step. Open `index.html` in any modern browser:
