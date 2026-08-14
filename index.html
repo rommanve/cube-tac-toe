@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cube Tac Toe</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-player="X" data-phase="place">
+
+<div class="app">
+
+  <section class="board">
+    <div id="stage" class="stage">
+      <div id="cube" class="cube"></div>
+      <div id="hint" class="hint"></div>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="overlay-card">
+        <h2 id="overlay-title">Player 1 wins!</h2>
+        <p id="overlay-sub"></p>
+        <button id="play-again" class="primary">Play again</button>
+      </div>
+    </div>
+  </section>
+
+  <aside class="panel">
+    <header class="panel-head">
+      <h1>Cube&nbsp;Tac&nbsp;Toe</h1>
+      <p class="tagline">Tic-tac-toe on a scrambling Rubik's Cube</p>
+    </header>
+
+    <div class="turn-card">
+      <div id="badge" class="badge badge-x">X</div>
+      <div class="turn-text">
+        <strong id="turn-label">Player 1 (X)</strong>
+        <span id="phase-label">Place your mark on any empty sticker.</span>
+      </div>
+    </div>
+
+    <div class="counters">
+      <div class="counter counter-x"><span id="count-x">0</span> X placed</div>
+      <div class="counter counter-o"><span id="count-o">0</span> O placed</div>
+      <div class="counter counter-last">last <span id="last-move">–</span></div>
+    </div>
+
+    <div class="moves">
+      <h3>Face turns</h3>
+      <div id="face-moves" class="move-grid"></div>
+      <h3>Slice turns</h3>
+      <div id="slice-moves" class="move-grid"></div>
+    </div>
+
+    <div class="history-block">
+      <h3>Move history</h3>
+      <p id="history" class="history">—</p>
+    </div>
+
+    <details class="rules">
+      <summary>How to play</summary>
+      <ol>
+        <li>Player 1 is <b>X</b>, Player 2 is <b>O</b>.</li>
+        <li>On your turn, click any empty white sticker to place your mark.</li>
+        <li>Then make exactly one quarter turn — press a move button, press its
+            letter key (hold <kbd>Shift</kbd> for a prime turn), or drag across a
+            face of the cube.</li>
+        <li>Drag the background any time to spin the cube and inspect all six sides.</li>
+        <li>Three of your marks in a row, column or diagonal on a single face
+            wins — but it is only checked <b>after</b> the turn completes, so a
+            careless move can undo your line or hand one to your opponent.</li>
+      </ol>
+    </details>
+
+    <div class="panel-actions">
+      <button id="new-game">New game</button>
+      <button id="reset-view">Reset view</button>
+    </div>
+  </aside>
+
+</div>
+
+<script src="src/cube.js"></script>
+<script src="src/render.js"></script>
+<script src="src/game.js"></script>
+</body>
+</html>
